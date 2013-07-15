@@ -38,6 +38,22 @@ a {
   text-decoration:none;
 }
 
+a:hover {
+  color: red;
+}
+
+a:visited {
+  color: #800000;
+}
+
+a:hover:hover {
+  color: red;
+}
+
+h1 a:visited {
+  color:#39c;
+}
+
 a small {
   font-size:11px;
   color:#777;
@@ -102,6 +118,15 @@ header {
 }
 
 header ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+header li {
+
+}
+/*
+header ul {
   list-style:none;
   height:40px;
   
@@ -137,7 +162,7 @@ header ul a {
   padding-top:6px;
   height:40px;
 }
-
+*/
 strong {
   color:#222;
   font-weight:700;

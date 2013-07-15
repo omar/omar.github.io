@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>{% if page.title %} {{ page.title }} | {% endif %} Omar Khudeira</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">omar.io</a></h1>
+        <p>Omar Khudeira - Chicago 
+          <br />
+          <a href="http://github.com/omar" title="GitHub">GitHub</a> 
+          |
+          <a href="http://careers.stackoverflow.com/omar" title="Stack Overflow CV">Stack Overflow CV</a>
+          |
+          <a href="http://linkedin.com/in/okhudeira" title="LinkedIn">LinkedIn</a>
+        </p>
+
+        <p>
+          <a href="http://omar.github.com/ps1gen">ps1gen</a>
+          |
+          <a href="http://mesoBoard.com">mesoBoard</a>
+          |
+          <a href="http://bookturf.com">bookturf.com</a>
+        </p>
+        </p>
+        <p class="view">
+        </p>
+<ul class="entries">
+  {% for post in site.posts %}
+ 
+  <li>
+    {{ post.date | date: "%b %d, %Y" }} -
+    <a href="{{ post.url }}">
+      {{ post.title }}
+    </a>
+  </li>
+ 
+  {% endfor %}
+</ul>
+      </header>
+      <section>
+        {{ content }}
+      </section>
+      <footer>
+        <p><small>2012-2013 &copy; Omar Khudeira</small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-42330579-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
