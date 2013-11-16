@@ -35,23 +35,28 @@
           <a href="http://bookturf.com">bookturf.com</a>
         </p>
         </p>
-        <p class="view">
-        </p>
-<ul class="entries">
-  {% for post in site.posts %}
- 
-  <li>
-    {{ post.date | date: "%b %d, %Y" }} -
-    <a href="{{ post.url }}">
-      {{ post.title }}
-    </a>
-  </li>
- 
-  {% endfor %}
-</ul>
+          <ul class="entries">
+            {% for post in site.posts %}
+           
+            <li>
+              {{ post.date | date: "%b %d" }} -
+              <a href="{{ post.url }}">
+                {{ post.title }}
+              </a>
+            </li>
+           
+            {% endfor %}
+          </ul>
       </header>
       <section>
-        {{ content }}
+        {% for post in site.posts %}
+        <article>
+          <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          <h3>{{ post.date | date: "%b %d, %Y" }}</h3>
+
+          {{ post.content }}
+        </article>
+        {% endfor %}
       </section>
       <footer>
         <p><small>2012-2013 &copy; Omar Khudeira</small></p>

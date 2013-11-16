@@ -112,7 +112,7 @@ img {
 }
 
 header {
-  width:270px;
+  width:auto;
   float:left;
   position:fixed;
 }
@@ -169,13 +169,12 @@ strong {
 }
 
 header ul li + li {
-  width:88px;
+  width:auto;
   border-left:1px solid #fff;
 }
 
 header ul li + li + li {
   border-right:none;
-  width:89px;
 }
 
 header ul a strong {
