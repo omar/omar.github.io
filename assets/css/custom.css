@@ -13,3 +13,10 @@
 {
 	color: #800000;
 }
+
+
+@media print, screen and (max-width: 480px) { 
+  #extra {
+    display:none;
+  }
+}
