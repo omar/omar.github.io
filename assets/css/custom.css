@@ -3,3 +3,13 @@
 	margin-right: 5px;
 	font-size: 1.5em;
 }
+
+.profile-links a:visited
+{
+	color: #39c;
+}
+
+.profile-links a:hover
+{
+	color: #800000;
+}
