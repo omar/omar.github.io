@@ -1,71 +1,52 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{% if page.title %} {{ page.title }} | {% endif %} Omar Khudeira</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>{% if page.title %} {{ page.title }} | {% endif %} Omar Khudeira</title>
 
-    <link rel="stylesheet" href="/stylesheets/styles.css">
-    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/assets/css/custom.css">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="/">omar.io</a></h1>
-        <div class="profile-links">
-          <div>Omar Khudeira - Chicago</div>
-          <a href="http://github.com/omar" title="GitHub"><i class="fa fa-github-alt"></i></a> 
-          <a href="http://careers.stackoverflow.com/omar" title="Stack Overflow CV"><i class="fa fa-stack-overflow"></i></a>
-          <a href="http://linkedin.com/in/okhudeira" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+        <link rel="stylesheet" href="/stylesheets/styles.css">
+        <link rel="stylesheet" href="/stylesheets/syntax.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1><a href="/">omar.io</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="main">
+                {{ content }}
+            </section>
+            <footer>
+                <div id="profile-links">
+                    <a href="http://github.com/omar" title="GitHub"><i class="fa fa-github-alt"></i></a>
+                    <a href="http://careers.stackoverflow.com/omar" title="Stack Overflow CV"><i class="fa fa-stack-overflow"></i></a>
+                    <a href="http://linkedin.com/in/okhudeira" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    <a href="http://twitter.com/OmarKhud" title="Twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+                <p><small>{{ site.time | date: '%Y' }} &copy; Omar Khudeira</small></p>
+            </footer>
         </div>
-        <div id="extra">
-          <strong class="title">Projects</strong>
-          <ul>
-            <li><a href="http://github.com/omar/ByteSize">ByteSize</a></li>
-            <li><a href="http://omar.github.com/ps1gen">ps1gen</a></li> 
-            <li><a href="http://github.com/omar/mesoBoard">mesoBoard</a></li>
-            <li><a href="http://bookturf.com">bookturf.com</a></li>
-          </ul>
-          <strong class="title">Posts</strong>
-            <ul class="entries">
-              {% for post in site.posts %}
-             
-              <li>
-                {{ post.date | date: "%b %d" }} -
-                <a href="{{ post.url }}">
-                  {{ post.title }}
-                </a>
-              </li>
-             
-              {% endfor %}
-            </ul>
-            <a href="/archive.html">(archive)</a>
-          </div>
-      </header>
-      <section>
-      {{ content }}
-      </section>
-      <footer>
-        <p><small>2012-2013 &copy; Omar Khudeira</small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
+        <script src="/javascripts/scale.fix.js"></script>
+        <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
+        </script>
+        <script type="text/javascript">
             try {
-              var pageTracker = _gat._getTracker("UA-42330579-1");
-            pageTracker._trackPageview();
+                var pageTracker = _gat._getTracker("UA-42330579-1");
+                pageTracker._trackPageview();
             } catch(err) {}
-          </script>
-
-  </body>
+        </script>
+    </body>
 </html>

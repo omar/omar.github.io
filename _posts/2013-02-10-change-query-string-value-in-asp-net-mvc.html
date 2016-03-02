@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Changing a query string value in ASP.NET MVC
-tags: asp.net-mvc
+tags: asp.net
 ---
 <p>I've come across more than one occasion where a link on a page only needs to modify one or more query string values. Take for example a simple pagination list:</p>
 
-{% highlight csharp %}	
+{% highlight csharp %}
 <ul>
-   @for (int i = 1; i < Model.PageCount; i++) 
+   @for (int i = 1; i < Model.PageCount; i++)
    {
       <li>
          <a href="@Url.Action("Index", "Home", new { page = i })">@i</a>
-      </li> 
+      </li>
    }
 </ul>
 {% endhighlight %}
@@ -25,19 +25,19 @@ tags: asp.net-mvc
 <p>This can be achived with a simple <code>UrlHelper</code> extension method:</p>
 
 
-{% highlight csharp %}					
+{% highlight csharp %}
 public static HtmlString RouteValueChange(this UrlHelper url, object routeValues)
 {
     // Convert new route values to a dictionary
     RouteValueDictionary newRoute = new RouteValueDictionary(routeValues);
-    
+
     // Get the route data of the current Url
     var current = url.RequestContext.RouteData.Values;
-    
+
     // Merge the new values INTO the current values, overwriting any existing values/querystrings
     foreach (var item in newRoute)
     	current[item.Key] = item.Value;
-    
+
     // Generate the new Url
     var newUrl = url.RouteUrl(current);
     return new HtmlString(newUrl);
