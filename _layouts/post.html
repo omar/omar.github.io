@@ -2,8 +2,8 @@
 layout: main
 ---
 <article>
-	<h2>{{ page.title }}</h2>
-	<h5>{{ page.date | date: "%b %d, %Y" }}</h5>
+	<h2 id="post-title">{{ page.title }}</h2>
+	<h5 id="post-date">{{ page.date | date: "%b %d, %Y" }}</h5>
 
 	{{ content }}
 </article>
