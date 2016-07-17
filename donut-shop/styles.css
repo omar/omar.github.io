@@ -1,0 +1,133 @@
+body {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.row {
+    margin: 0;
+}
+
+li.match {
+    color: green;
+    background-color: green;
+}
+
+#output li.sprinkles,
+#input li.sprinkles,
+li.sprinkles a { 
+    background-image: url('images/Sprinkles.gif');
+}
+
+#output li.plain,
+#input li.plain,
+li.plain a {
+    background-image: url('images/Plain.gif');
+}
+
+#output li.chocolate,
+#input li.chocolate,
+li.chocolate a {
+    background-image: url('images/Chocolate.gif');
+}
+
+#output li.french-cruller,
+#input li.french-cruller,
+li.french-cruller a {
+    background-image: url('images/FrenchCruller.gif');
+}
+
+#output li.jelly,
+#input li.jelly,
+li.jelly a {
+    background-image: url('images/Jelly.gif');
+}
+
+#output li.old-fashioned,
+#input li.old-fashioned,
+li.old-fashioned a {
+    background-image: url('images/OldFashioned.gif');
+}
+
+#donut-basket ul {
+    padding: 0;
+    height: 130px;
+    max-width: 400px;
+    margin: 0 auto;
+    -webkit-column-count: 2;
+        -moz-column-count: 2;
+            column-count: 2;
+}
+
+#donut-basket li {
+    list-style: none;
+}
+
+#donut-basket li a {
+    background-repeat: no-repeat;
+    background-position: 5px;
+    height: 42px;
+    padding: 10px 0 10px 45px;
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    width: 160px;
+}
+
+#donut-basket li a:hover {
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#input li,
+#output li {
+    width: 37px;
+    height: 37px;
+    padding: 0;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: block;
+}
+
+#input ol,
+#output ol {
+    padding: 0;
+    margin: 0;
+}
+
+#dmm-middle {
+    background-color: #eee;
+    border-radius: 15px;
+    padding: 20px 12px;
+    max-width: 200px;
+    margin: 20px auto;
+}
+
+#dmm-middle button {
+    margin: 10px auto;
+    width: 100px;
+}
+
+.container-fluid:after {
+    content: "";
+    display: block;
+}
+
+footer, .container-fluid:after {
+    height: 142px; 
+}
+
+footer {
+    position: relative;
+}
+
+footer small {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
