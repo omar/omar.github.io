@@ -124,3 +124,15 @@ blockquote {
     padding-left: 20px;
     margin-left: 0;
 }
+
+a.dmm-link {
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #39c;
+    color: #fff;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 265px;
+}
