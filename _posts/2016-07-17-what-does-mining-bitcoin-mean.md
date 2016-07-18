@@ -136,7 +136,7 @@ The way the DMM behaves hinges on clever logic that makes it nearly impossible t
 
 >  a function that can be used to map data of arbitrary size to data of fixed size.
 
-Cryptography experts have created multiple hash functions which are nearly impossible to reverse. However, as computing power increases, brute force solutions have become more feasible. For that reason, newer hashing functions intentionally take longer to computer (think of how the DMM takes 5 minutes to generate the output). The increased compute time of the function in turn increases the time it takes to reach a solution through brute force.   
+Cryptography experts have created multiple hash functions which are nearly impossible to reverse. However, as computing power increases, brute force solutions have become more feasible. For that reason, newer hashing functions intentionally take longer to compute (think of how the DMM takes 5 minutes to generate the output). The increased compute time of the function in turn increases the time it takes to reach a solution through brute force.   
 
 # The Big Reveal
 
