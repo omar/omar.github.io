@@ -33,7 +33,7 @@ We start in a donut (or doughnut) shop. The shop owner has decided to halt all b
 
       If I put those same donuts in again, I'll get the same ones out. For a specific input, you'll always get the same output, it never changes.
     - If you change the order of the donuts you put in, it will dramatically change the result that comes out of the machine.
-    - The machine will always takes 5 minutes for any run, no matter what how many donuts you put into it.
+    - The machine will always take 5 minutes for any run, no matter what how many donuts you put into it.
 
 The Donut Manipulator Machine (DMM) is a critical piece of the puzzle. Take the time to review its properties as they're key to solving this puzzle.
 
@@ -57,7 +57,7 @@ To elaborate on what the puzzle is, the owner wants to know what quantity of don
 
 So how do we solve this puzzle?
 
-All we can do is guess because the DMM is special and no one knows how it determines which donuts to put out. So we go over to the Donut Basket, grab a Old Fashioned, French Cruller, Chocolate, then head over to the DMM. We put our selection of donuts in the same order we got them, then wait for it to do its magic. After 5 minutes, the DMM gives us:
+All we can do is guess because the DMM is special and no one knows how it determines which donuts to put out. So we go over to the Donut Basket, grab an Old Fashioned, French Cruller, Chocolate, then head over to the DMM. We put our selection of donuts in the same order we got them, then wait for it to do its magic. After 5 minutes, the DMM gives us:
 
 1. Plain
 2. Sprinkles
@@ -65,7 +65,7 @@ All we can do is guess because the DMM is special and no one knows how it determ
 4. Jelly
 5. Jelly
 
-So close! We got a Sprinkles as the 2nd donut but the shop owner only wants Sprinkles in the first position. We desperately want that donut hole so we decide to lie to the owner telling them that we figured it out. Besides, what does he know, he turned his donut shop into a puzzle solving place. We tell him that if he puts a Old Fashioned, French Cruller, Chocolate into the DMM, a Sprinkles will come out as the first donut. We believe we've outsmarted him and the donut hole is as good as ours!
+So close! We got a Sprinkles as the 2nd donut but the shop owner only wants Sprinkles in the first position. We desperately want that donut hole so we decide to lie to the owner telling them that we figured it out. Besides, what does he know, he turned his donut shop into a puzzle solving place. We tell him that if he puts an Old Fashioned, French Cruller, Chocolate into the DMM, a Sprinkles will come out as the first donut. We believe we've outsmarted him and the donut hole is as good as ours!
 
 Well, because the Donut Basket and DMM is usable by anyone, the shop owner walks right over to the Donut Basket, grabs the donuts we told him about, puts them into the DMM, waits 5 minutes and gets the following donuts:
 
