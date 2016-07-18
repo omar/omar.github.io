@@ -3,7 +3,7 @@ layout: post
 title: "What does it mean to 'mine' Bitcoins?"
 ---
 
-Bitcoins are in vogue. Distributed ledgers, fiat currency, and the dramatic impact cryptocurrencies will have on financial systems are topics of discussions on trains, in board meetings, and at the dinner table. As of writing, the exchange rate is <code>1 BTC = 679.99 USD</code>.
+Bitcoins are in vogue. Distributed ledgers, fiat currency, and the dramatic impact cryptocurrencies will have on financial systems are topics of discussion on trains, in board meetings, and at the dinner table. As of writing, the exchange rate is <code>1 BTC = 679.99 USD</code>.
 
 However, most people only have a high-level understanding of how Bitcoins work. Most are dumbfounded at how menial the act of "mining" is. Of the Bitcoin explanations I've seen, mining is usually explained as solving a problem that has multiple answers, but you can only solve it by [brute force](https://en.wikipedia.org/wiki/Brute-force_search) (i.e. there's no clever and quick way to solve it). You successfully "mine" a Bitcoin when you find an answer to this problem then continue looking for other answers. So what is this "problem" and why can't I solve it using my TI-83?
 
@@ -33,7 +33,7 @@ We start in a donut (or doughnut) shop. The shop owner has decided to halt all b
 
       If I put those same donuts in again, I'll get the same ones out. For a specific input, you'll always get the same output, it never changes.
     - If you change the order of the donuts you put in, it will dramatically change the result that comes out of the machine.
-    - The machine will always take 5 minutes for any run, no matter what how many donuts you put into it.
+    - The machine will always take 5 minutes for any run, no matter how many donuts you put into it.
 
 The Donut Manipulator Machine (DMM) is a critical piece of the puzzle. Take the time to review its properties as they're key to solving this puzzle.
 
@@ -49,11 +49,11 @@ Now that we understand what the pieces of the puzzle are, the shop owner wants u
 
 To elaborate on what the puzzle is, the owner wants to know what quantity of donuts, in what order, and of what type you have to put in so the DMM spits out a donut order matching:
 
-1.  Any Type of Donut
-2.  Any Type of Donut
-3.  Any Type of Donut
-4.  Any Type of Donut
-5.  Sprinkles
+1. Sprinkles
+2. Any Type of Donut
+3. Any Type of Donut
+4. Any Type of Donut
+5. Any Type of Donut
 
 So how do we solve this puzzle?
 
@@ -65,7 +65,7 @@ All we can do is guess because the DMM is special and no one knows how it determ
 4. Jelly
 5. Jelly
 
-So close! We got a Sprinkles as the 2nd donut but the shop owner only wants Sprinkles in the first position. We desperately want that donut hole so we decide to lie to the owner telling them that we figured it out. Besides, what does he know, he turned his donut shop into a puzzle solving place. We tell him that if he puts an Old Fashioned, French Cruller, Chocolate into the DMM, a Sprinkles will come out as the first donut. We believe we've outsmarted him and the donut hole is as good as ours!
+So close! We got a Sprinkles as the 2nd donut but the shop owner only wants Sprinkles in the first position. We desperately want that donut hole so we decide to lie to the owner telling him that we figured it out. Besides, what does he know, he turned his donut shop into a puzzle solving place. We tell him that if he puts an Old Fashioned, French Cruller, Chocolate into the DMM, a Sprinkles will come out as the first donut. We believe we've outsmarted him and the donut hole is as good as ours!
 
 Well, because the Donut Basket and DMM is usable by anyone, the shop owner walks right over to the Donut Basket, grabs the donuts we told him about, puts them into the DMM, waits 5 minutes and gets the following donuts:
 
