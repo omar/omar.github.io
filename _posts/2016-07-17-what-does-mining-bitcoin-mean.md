@@ -100,7 +100,7 @@ To our surprise, the DMM gives us:
 4. Old Fashioned
 5. Sprinkles
 
-We got a Sprinkles as the 1st donut! We rush to the owner, tell him to put in Old Fashioned, Old Fashioned, French Cruller, French Cruller, to get a Sprinkles as the first donut. The shop owner does exactly as we did with the DMM and confirms that we've solved the puzzle. He writes down in his ledger our findings and assigns us the award.
+We got a Sprinkles as the 1st donut! We rush to the owner, tell him to put in Old Fashioned, Old Fashioned, French Cruller, French Cruller, to get a Sprinkles as the first donut. The shop owner does exactly as we did with the DMM and confirms that we've solved the puzzle. He writes down our findings in his ledger and assigns us the award.
 
 We got a donut hole! But wait, there's more! There could be other combinations of donuts we can put into the DMM to get a Sprinkles as the first donut. So we roll up our sleeves and:
 
