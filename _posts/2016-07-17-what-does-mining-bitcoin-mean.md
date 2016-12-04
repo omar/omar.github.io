@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "What does it mean to 'mine' Bitcoins?"
+tags: bitcoin
 ---
 
 Bitcoins are in vogue. Distributed ledgers, fiat currency, and the dramatic impact cryptocurrencies will have on financial systems are topics of discussion on trains, in board meetings, and at the dinner table. As of writing, the exchange rate is <code>1 BTC = 679.99 USD</code>.
