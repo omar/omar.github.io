@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "When technically right is wrong: Email Validation"
-tags: technically-right-is-wrong
+tags: when-technically-right-is-wrong
 ---
 
 What is the correct way to validate an email address? Technically, a valid email address, as described in [IETF RFC #822](http://www.ietf.org/rfc/rfc0822.txt?number=822) can be approximated by this regex [courtesy of Paul Warren](http://www.ex-parrot.com/~pdw/Mail-RFC822-Address.html):
