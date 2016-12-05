@@ -13,7 +13,7 @@ It's an approximation because RFC #822 states that nested comments are allowed, 
 
 While this regex is _technically_ the right answer for email validation, it's the wrong way to validate email addresses. No user is ever going have nested comments (or unnested comments) in their email. This regex also fails the user test because it matches the following email address:
 
-1. `me@domain` - unless you're application is built for an intranet, this will not be valid.
+1. `me@domain` - unless your application is built for an intranet, this will not be valid.
 2. `me@domaincom` - again, this would work for an intranet, but the user intended `me@domain.com`.
 
 As programmers, we tend to research the "correct" way of doing something before doing it. So what is the _right_ way to validate email address? There isn't one. A better question to ask is:
