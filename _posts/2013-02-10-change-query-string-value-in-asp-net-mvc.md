@@ -27,7 +27,7 @@ This should generate the current URL but with an updated `page` query string val
 public static HtmlString RouteValueChange(this UrlHelper url, object routeValues)
 {
     // Convert new route values to a dictionary
-    RouteValueDictionary newRoute = new RouteValueDictionary(routeValues);
+    var newRoute = new RouteValueDictionary(routeValues);
 
     // Get the route data of the current Url
     var current = url.RequestContext.RouteData.Values;
