@@ -32,7 +32,8 @@ public static HtmlString RouteValueChange(this UrlHelper url, object routeValues
     // Get the route data of the current Url
     var current = url.RequestContext.RouteData.Values;
 
-    // Merge the new values INTO the current values, overwriting any existing values/querystrings
+    // Merge the new values INTO the current values,
+    // overwriting any existing values/querystrings
     foreach (var item in newRoute)
     	current[item.Key] = item.Value;
 
