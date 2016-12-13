@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic);
 
-@import url('/node_modules/normalize.css/normalize.css');
+@import url('/stylesheets/node_modules/normalize.css/normalize.css');
 
 body {
   font-family: 'Lato', Arial, sans-serif;
