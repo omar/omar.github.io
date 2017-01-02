@@ -57,7 +57,6 @@ There's many steps you can take to ensure you get the correct email from custome
     However, not all servers allow this behavior given the security issues with allowing it, namely [user enumeration](https://www.owasp.org/index.php/Testing_for_User_Enumeration_and_Guessable_User_Account_(OWASP-AT-002)).  
 
 
-While the above methods solve a number of use cases, there's always more that can be done. For example, [Mailcheck](http://getmailcheck.org/) provides a spellchecker that catches the most common mispellings of emails like `gmail.con` or `hotnail.com`. Some services don't ask for an email at all but instead require the use of single sign on using Facebook or Google. 
+While the above methods solve a number of use cases, there's always more that can be done. For example, [Mailcheck](http://getmailcheck.org/) provides a spellchecker that catches the most common mispellings of emails like `gmail.con` or `hotnail.com`. Some services don't ask for an email at all but instead require the use of single sign on using Facebook or Google eliminating the need to verify a user's email.
 
-
- 
+Approaching technical problems from the perspective of the user is an important technique to adopt when building products. If that means you'll violate a standard, that's okay because your biggest critics will be your customers and not a standards working group.
