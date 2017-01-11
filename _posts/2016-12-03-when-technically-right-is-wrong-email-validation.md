@@ -61,4 +61,4 @@ While the above methods solve a number of use cases, there's always more that ca
 
 Approaching technical problems from the perspective of the user is an important technique to adopt when building products. If that means you'll violate a standard, that's okay because your biggest critics will be your customers and not a standards working group.
 
-_Thank you to [Muntaser Qutub](https://www.linkedin.com/in/muntaserqutub) for reviewing a draft of this post._
+_Thank you to [Muntaser Qutub](https://twitter.com/muntaserqutub) for reviewing a draft of this post._
