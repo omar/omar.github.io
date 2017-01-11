@@ -24,3 +24,6 @@ What determines the type of engineer you are depends on the consistency of the s
 Like most things, engineering is a team sport. It’s up to the individual team members to help each other identify under-engineered and over-engineered solutions to ensure the best possible work product for the whole team. Code reviews and pair programming are effective practices where team members and managers can assess each other’s work to understand where help is needed. Through this lense, teams can identify poor solutions before they’re shipped to the customer while ensuring technical debt is tightly managed.
 
 It's difficult to map the types of engineers to an easily quantifiable measurement of effectiveness that can be leveraged for assessing talent. However, if there exists a chain of trust that begins at the most senior level of the organization and extends to all managers within it, qualitative discussions on individual and team results can be used to properly assess engineering talent. This is not to say that velocity or bug count are not valuable, rather, they can’t be the primary means to determine quality or ability. 
+
+
+_Discuss on [Hacker News](https://news.ycombinator.com/item?id=13374530)_
