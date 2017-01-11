@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Types of Engineers"
+title: "The Types of Software Engineers"
 tags: engineering
 ---
 A plethora of books, articles, and research papers have been written about software engineering quality measurement. Over the course of the last half-century, different methods of measurement have been developed, adopted, abused, and discarded for newer methods that aim to solve the problems of the previous methods.
