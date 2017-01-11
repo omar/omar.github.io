@@ -27,6 +27,6 @@ It's difficult to map the types of engineers to an easily quantifiable measureme
 
 _Thank you to [Abdelnasser Rashid](https://www.linkedin.com/in/abdelnasser-rashid-339aa63a) for reading a draft of this post._
 
-_Discuss on [Hacker News](https://news.ycombinator.com/item?id=13374530)_
+_Discuss on [Hacker News](https://news.ycombinator.com/item?id=13374530)._
 
 
