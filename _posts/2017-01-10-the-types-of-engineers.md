@@ -25,5 +25,8 @@ Like most things, engineering is a team sport. It’s up to the individual team 
 
 It's difficult to map the types of engineers to an easily quantifiable measurement of effectiveness that can be leveraged for assessing talent. However, if there exists a chain of trust that begins at the most senior level of the organization and extends to all managers within it, qualitative discussions on individual and team results can be used to properly assess engineering talent. This is not to say that velocity or bug count are not valuable, rather, they can’t be the primary means to determine quality or ability. 
 
+_Thank you to [Abdelnasser Rashid](https://www.linkedin.com/in/abdelnasser-rashid-339aa63a) for reading a draft of this post._
 
 _Discuss on [Hacker News](https://news.ycombinator.com/item?id=13374530)_
+
+
