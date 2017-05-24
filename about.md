@@ -6,7 +6,7 @@ title: About
 
 Omar Khudeira <br />
 Chicago <br />
-VP of Engineering [@GoPangea](https://twitter.com/gopangea) - [engineering.gopangea.com](http://engineering.gopangea.com) <br />
+VP of Engineering [Marketing Attribution](http://marketingattribution.com) <br />
 
 ### Talks
 
