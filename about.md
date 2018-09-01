@@ -5,8 +5,6 @@ title: About
 ## About
 
 Omar Khudeira <br />
-Chicago <br />
-VP of Engineering at [Marketing Attribution](http://marketingattribution.com) <br />
 
 ### Talks
 
