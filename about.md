@@ -25,11 +25,3 @@ VP of Engineering at [Marketing Attribution](http://marketingattribution.com) <b
 - [ps1gen](http://omar.github.com/ps1gen)
 
     Bash PS1 generator and reference.
-
-- [mesoBoard](http://github.com/omar/mesoBoard) (unmaintained)
-
-    Message board software written using ASP.NET MVC.
-
-- [BookTurf](http://bookturf.com) (unmaintained)
-
-    College-centric textbook marketplace.
