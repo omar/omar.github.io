@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Why .NET?"
+excerpt_separator: <!--more-->
 ---
-
 _Originally posted on the Pangea Money Transfer Engineering blog._
 
 We get asked "Why .NET?" a lot. It's rare to find .NET startups these days and for good reason. Historically speaking, the .NET ecosystem was unattractive due to the high licensing cost of Windows and Visual Studio. In addition, .NET had poor interoperability with non-Microsoft products, which meant additional licensing costs for compatible products (like SQL Server). Lastly, Microsoft's [aggressive anti-competitive stance](https://en.wikipedia.org/wiki/Embrace,_extend_and_extinguish) towards its competitors and open source software created a rift between their products and developers.
-
+<!--more-->
 However, as technologies like Ruby on Rails, Django, and Node gained popularity and took market share from Microsoft, the business case was made and Microsoft had to change. As a company Microsoft is drastically different than it was ten years ago and the current .NET landscape is a clear indicator of that change.
 
 Ten years ago you couldn't download a [free and open source version of Visual Studio](https://code.visualstudio.com/) on your Mac, clone the [.NET git repository](https://github.com/dotnet/corefx), modify the source code, build a web app using the modified code, then deploy to a [Linux VM managed by Microsoft](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-tutorial/). Today you can.
