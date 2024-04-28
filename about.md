@@ -20,6 +20,6 @@ Omar Khudeira <br />
 
     Companion demo to the post [What does it mean to 'mine' Bitcoins?](/2016/07/17/what-does-mining-bitcoin-mean).
 
-- [ps1gen](http://omar.github.com/ps1gen)
+- [ps1gen](https://omar.io/ps1gen/)
 
     Bash PS1 generator and reference.
