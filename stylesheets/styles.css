@@ -4,11 +4,12 @@
 
 body {
   font-family: 'Lato', Arial, sans-serif;
-  color:#333;
+  color:#ced4da;
   font-weight: 400;
   line-height: 1.75;
   font-size: 18px;
   margin: 0;
+  background-color: #1d1e20;
 }
 
 .wrapper {
@@ -18,7 +19,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
   margin:0 0 20px;
 }
 
@@ -87,9 +87,9 @@ code, pre {
 }
 
 code {
-    background-color: #FDF3E7;
+    background-color: #2e2e33;
     padding: 1px 5px;
-    color: #333;
+    color: #fdf3e7;
 }
 
 pre code {
