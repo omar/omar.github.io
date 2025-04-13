@@ -96,6 +96,8 @@ pre code {
     color: #fff;
     padding: 0;
     background-color: #333;
+    font-size: .7em;
+    tab-size: 3;
 }
 
 pre {
@@ -105,6 +107,7 @@ pre {
 
 pre.highlight {
     background-color: #333;
+    line-height: 1em;
 }
 
 .highlighter-rouge .highlight {
@@ -140,4 +143,8 @@ a.dmm-link {
 
 #main {
     margin-top: 10px;
+}
+
+img {
+    max-width: 100%;
 }
