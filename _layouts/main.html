@@ -23,6 +23,10 @@
         <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
         <meta name="description" content="{{ page.excerpt | strip_html }}">
         {% endif %}
+
+        {% if page.image %}
+        <meta property="og:image" content="{{ page.image }}"/>
+        {% endif %}
         
 
         <!--[if lt IE 9]>

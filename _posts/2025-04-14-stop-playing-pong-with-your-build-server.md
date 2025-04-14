@@ -2,21 +2,18 @@
 layout: post
 title: "Stop playing pong with your build server"
 excerpt_separator: <!--more-->
+image: /images/build-server-pong.png
 ---
 
 _Special thanks to [Tim Cardwell](https://www.linkedin.com/in/tim-cardwell) for reviewing a draft of this post._
 
 "Build Server Pong" is what you inadvertently play when you treat your build
 server and source control as a [REPL(read-edit-print-loop)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
-You make a code change, commit it, push it, kick off a build, grab a coffee,
-then wait for the results. Rinse and repeat until you've got a successful build.
+You make a code change, commit it, push it, kick off a build, grab a coffee, then wait for the results. Rinse and repeat until you've got a successful build.
 
 ![Build Server Pong](/images/build-server-pong.png)
 
-However, even if you eventually score a point by getting a successful build,
-you've lost time in the rally to get it. It's an easy trap to fall into because
-most build systems require you to run the workflow on *their* hosted runners to
-see the results of your changes.
+However, even if you eventually score a point by getting a successful build, you've lost time in the rally to get it. It's an easy trap to fall into because most build systems require you to run the workflow on *their* hosted runners to see the results of your changes.
 
 <!--more-->
 
