@@ -110,7 +110,11 @@ pre.highlight {
     line-height: 1em;
 }
 
-.highlighter-rouge .highlight {
+/* 
+    Only target elements that are direct descendants of article, otherwise
+    inline code will be affected by the style and wrap over normal text.
+*/
+article > .highlighter-rouge {
     margin: 0 -15px;
 }
 
