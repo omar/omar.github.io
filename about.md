@@ -6,6 +6,8 @@ title: About
 
 Omar Khudeira <br />
 
+Made with <span title="Ahh! A bug!">🐛</span> (bugs) in Chicago
+
 ### Talks
 
 - [Tech in Motion: Open Sourcing Microsoft](https://vimeo.com/188623978) (2016-10-20)
