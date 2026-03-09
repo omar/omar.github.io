@@ -19,13 +19,13 @@
         <meta property="og:url" content="{{ site.url }}{{ page.url }}">
         {% endif %}
         {% if page.share_excerpt %}
-        <meta property="og:description" content="{{ page.share_excerpt | strip_html }}" />
-        <meta name="twitter:description" content="{{ page.share_excerpt | strip_html }}">
-        <meta name="description" content="{{ page.share_excerpt | strip_html }}">
+        <meta property="og:description" content="{{ page.share_excerpt | strip_html | strip_newlines }}" />
+        <meta name="twitter:description" content="{{ page.share_excerpt | strip_html | strip_newlines }}">
+        <meta name="description" content="{{ page.share_excerpt | strip_html | strip_newlines }}">
         {% else %}
-        <meta property="og:description" content="{{ page.excerpt | strip_html }}" />
-        <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
-        <meta name="description" content="{{ page.excerpt | strip_html }}">
+        <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
+        <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
+        <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }}">
         {% endif %}
 
         {% if page.image %}
