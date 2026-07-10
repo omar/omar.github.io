@@ -15,9 +15,11 @@ Presigned S3 uploads point at a better shape: vend a scoped credential and
 let the client write bytes straight to storage, no API in the middle. This
 works great for blob uploads, but for structured data, clients typically
 still send a CSV or JSON batch (e.g. [Stripe's batch jobs API](https://docs.stripe.com/batch-api)).
-With [Apache Iceberg](https://iceberg.apache.org/), we can apply the same idea to structured data: vend
-access to a staging table instead of a blob, and let the client write rows
-to it directly.
+With [Apache Iceberg](https://iceberg.apache.org/), we can apply the same
+idea to structured data: vend access to a staging table instead of a blob
+location, and let the client write rows to it directly. No parsers,
+serializers, or large payloads to juggle; the Iceberg ecosystem handles
+that for us.
 
 <!--more-->
 
@@ -105,14 +107,15 @@ take table ARNs as resources and support `s3tables:namespace` /
 people associate with managed Iceberg catalogs is just IAM, doing what IAM
 already does.
 
-S3 Tables' IAM actions don't distinguish writing data from changing a
-table's schema, since both go through `UpdateTableMetadataLocation`, so
+However, S3 Tables' IAM actions don't distinguish writing data from changing
+a table's schema, since both go through `UpdateTableMetadataLocation`, so
 credentials scoped for appends can also evolve the table's schema.
-[Apache Polaris](https://polaris.apache.org/releases/1.4.0/managing-security/access-control/)
-draws this line more finely, with a `TABLE_WRITE_DATA` privilege kept
-separate from schema changes. It matters little here: it's one disposable
-staging table, and the promotion step validates the schema before
-committing anything, so the blast radius stays limited either way.
+Since this is a staging table though, the promotion step validates
+the schema before promoting it downstream.
+
+Some catalogs like [Apache Polaris](https://polaris.apache.org/releases/1.4.0/managing-security/access-control/)
+provide more granular permissions. The `TABLE_WRITE_DATA` privilege is kept
+separate from the `TABLE_WRITE_PROPERTIES` privilege used for schema changes.
 
 ### Writing and completing
 
@@ -277,4 +280,3 @@ The API shape stays the same: vend narrow access to a temporary dataset, let
 the client move the heavy data directly, then validate and promote what
 landed.
 
-<!-- TODO: link the repo -->
