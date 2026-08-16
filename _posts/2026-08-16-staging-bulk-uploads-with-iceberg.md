@@ -3,19 +3,20 @@ layout: post
 title: "Staging Bulk Uploads With Amazon S3 Tables"
 excerpt_separator: <!--more-->
 share_excerpt: >
-  Bulk upload and download APIs usually end up buried in file formats, parsers, type coercion, chunking, and cleanup. Iceberg tables let the client write structured data straight to storage instead.
+  Direct-to-S3 uploads/downloads is a common architecture of APIs for handling unstructured binary files and leveraging S3's scale. With S3 Tables and Iceberg, that pattern can now be extended to structured data.
 ---
 
-Building a bulk upload or download API usually means picking a file format,
+Building a bulk upload or download API for structured data usually means picking a file format,
 writing parsers and serializers on both sides, coercing strings back into
 real types, chunking large transfers, and cleaning up half-loaded data after
 failures.
 
-Presigned S3 uploads point at a better shape: vend a scoped credential and
+Direct-to-S3 uploads point at a better shape: vend a scoped credential and
 let the client write bytes straight to storage, no API in the middle. This
 works great for blob uploads, but for structured data, clients typically
 still send a CSV or JSON batch (e.g. [Stripe's batch jobs API](https://docs.stripe.com/batch-api)).
-With [Apache Iceberg](https://iceberg.apache.org/), we can apply the same
+
+With [S3 Tables](https://aws.amazon.com/s3/features/tables/) and [Apache Iceberg](https://iceberg.apache.org/), we can apply the same
 idea to structured data: vend access to a staging table instead of a blob
 location, and let the client write rows to it directly. No parsers,
 serializers, or large payloads to juggle; the Iceberg ecosystem handles
@@ -53,6 +54,8 @@ Simplified version of the two endpoints that do this:
 
 ```python
 from pyiceberg.catalog import load_catalog
+
+WAREHOUSE_ARN = "s3://63a8e430-6e0b-46f5-k833abtwr6s8tmtsycedn8s4yc3xhuse1b--table-s3"
 
 catalog = load_catalog("s3tables", type="rest", warehouse=WAREHOUSE_ARN)
 
@@ -104,8 +107,7 @@ def vend_credentials(upload_id: str):
 S3 Tables' IAM actions (`GetTableData`, `PutTableData`, `CreateTable`, ...)
 take table ARNs as resources and support `s3tables:namespace` /
 `s3tables:tableName` condition keys natively. The credential-vending pattern
-people associate with managed Iceberg catalogs is just IAM, doing what IAM
-already does.
+people associate with managed Iceberg catalogs uses IAM here.
 
 However, S3 Tables' IAM actions don't distinguish writing data from changing
 a table's schema, since both go through `UpdateTableMetadataLocation`, so
@@ -173,7 +175,7 @@ transactions = [
     },
 ]
 
-# PyArrow applies the table schema here, catching obvious client-side
+# PyArrow applies the table schema here, catching client-side
 # mistakes before the API validates the upload on complete.
 transactions_batch = pa.Table.from_pylist(
     transactions,
@@ -184,8 +186,7 @@ staging.append(transactions_batch)
 requests.post(f"{API}/uploads/{session['upload_id']}/complete")
 ```
 
-That data went straight from the client to the S3 table without the API in
-the middle.
+That data went straight from the client to the S3 table without the API in the middle.
 
 `POST /uploads/{id}/complete` is the signal that writing is done:
 
@@ -209,8 +210,8 @@ def complete_upload(upload_id: str):
     return {"status": "completed"}
 ```
 
-`validate()` is a background process that checks each row against whatever
-rules matter for this data, and it can write its findings to a separate
+`validate()` is a background process that checks each row against the
+rules for this data, and it can write its findings to a separate
 table so the client can query richer validation data than just whether the
 upload failed. On success, the table can be processed downstream and then
 dropped.
@@ -268,12 +269,12 @@ rows = read_table(catalog, session["download_table"])
 Iceberg solves the tedious parts of structured bulk APIs: typed data, atomic
 commits, large transfers, and clients in every major engine. S3 Tables and
 IAM add the access-control boundary, so the bulk data doesn't have to move
-through your network or servers at all.
+through your network or servers on initial upload or download.
 
 This pattern gets more interesting as bulk data becomes multimodal. Instead
 of handing clients an S3 location and asking them to dump binary objects
 there, formats like [Lance](https://lance.org/) point toward staged datasets
-for embeddings, images, audio, and video. Even Parquet has a proposal for a
+for embeddings, images, audio, and video. Parquet also has a proposal for a
 [file logical type](https://github.com/apache/parquet-format/pull/585),
 which could let the same Iceberg pattern apply to file-like values directly.
 The API shape stays the same: vend narrow access to a temporary dataset, let
