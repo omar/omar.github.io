@@ -55,13 +55,13 @@ Simplified version of the two endpoints that do this:
 ```python
 from pyiceberg.catalog import load_catalog
 
-WAREHOUSE_ARN = "s3://63a8e430-6e0b-46f5-k833abtwr6s8tmtsycedn8s4yc3xhuse1b--table-s3"
+WAREHOUSE_ARN = "arn:aws:s3tables:us-east-1:123456789012:bucket/my-table"
 
 catalog = load_catalog("s3tables", type="rest", warehouse=WAREHOUSE_ARN)
 
 @app.post("/uploads")
 def create_upload():
-    upload_id = f"upload_{uuid.uuid4().hex[:12]}"
+    upload_id = f"upload_{uuid.uuid4().hex}"
     staging_table = f"staging.{upload_id}"
     target = catalog.load_table("payments.transactions")
     catalog.create_table(staging_table, schema=target.schema())
